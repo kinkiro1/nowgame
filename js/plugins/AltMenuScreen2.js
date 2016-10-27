@@ -90,11 +90,7 @@
         this._statusWindow.x = 0;
         this._statusWindow.y = this._commandWindow.height;
         this._goldWindow.x = Graphics.boxWidth - this._goldWindow.width;
-        // make transparent for all windows at menu scene.
-        this._statusWindow.opacity = 0;
-        this._goldWindow.opacity = 0;
-        this._commandWindow.opacity = 0;
-    };
+  };
 
     // load bitmap that set in plugin parameter
     var _Scene_Menu_createBackground = Scene_Menu.prototype.createBackground;
