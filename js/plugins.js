@@ -22,5 +22,5 @@ var $plugins =
 {"name":"TYA_SymbolEncount","status":true,"description":"シンボルエンカウント作成の補助を行います。\r\n詳しい使い方はヘルプを参照してください。","parameters":{"situationVariables":"20"}},
 {"name":"drawSkillMpAndTp","status":true,"description":"スキルのMPコストとTPコストを両方表示することができます","parameters":{}},
 {"name":"ExtendWeaponImageConfig","status":true,"description":"武器グラフィックについて、より細かく設定できるようになります。","parameters":{}},
-{"name":"SwitchOnLoad","status":false,"description":"ゲームをロードしたときに指定のスイッチをONにします。","parameters":{"Switch ID":"5"}}
+{"name":"SwitchOnLoad","status":true,"description":"ゲームをロードしたときに指定のスイッチをONにします。","parameters":{"Switch ID":"5"}}
 ];
