@@ -21,6 +21,5 @@ var $plugins =
 {"name":"SymbolEncountLib","status":true,"description":"シンボルエンカウントを実装するためのライブラリです。","parameters":{}},
 {"name":"TYA_SymbolEncount","status":true,"description":"シンボルエンカウント作成の補助を行います。\r\n詳しい使い方はヘルプを参照してください。","parameters":{"situationVariables":"20"}},
 {"name":"drawSkillMpAndTp","status":true,"description":"スキルのMPコストとTPコストを両方表示することができます","parameters":{}},
-{"name":"ExtendWeaponImageConfig","status":true,"description":"武器グラフィックについて、より細かく設定できるようになります。","parameters":{}},
-{"name":"PictureAnimation","status":true,"description":"ピクチャのアニメーションプラグイン","parameters":{}}
+{"name":"ExtendWeaponImageConfig","status":true,"description":"武器グラフィックについて、より細かく設定できるようになります。","parameters":{}}
 ];
