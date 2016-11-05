@@ -2819,7 +2819,10 @@ TouchInput.isLongPressed = function() {
  * @return {Boolean} True if the right mouse button is just pressed
  */
 TouchInput.isCancelled = function() {
-    return this._cancelled;
+    if(Utils.isMobileDevice()){
+    }else{
+return this._cancelled;
+    }
 };
 
 /**

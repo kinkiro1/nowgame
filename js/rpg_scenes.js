@@ -585,7 +585,7 @@ Scene_Map.prototype.isMenuEnabled = function() {
 };
 
 Scene_Map.prototype.isMenuCalled = function() {
-    return Input.isTriggered('menu');
+    return Input.isTriggered('menu') || TouchInput.isCancelled();
 };
 
 Scene_Map.prototype.callMenu = function() {
