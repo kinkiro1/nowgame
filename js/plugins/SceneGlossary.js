@@ -704,7 +704,7 @@ function Scene_Glossary() {
         }
     };
 
-    Scene_Menu.prototype.commandGlossary = function(type) {
+     Scene_Menu.prototype.commandGlossary = function(type) {
         $gameTemp.setGlossaryType(type);
         SceneManager.push(Scene_Glossary);
     };
