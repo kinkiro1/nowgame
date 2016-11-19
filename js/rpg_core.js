@@ -6592,7 +6592,7 @@ WebAudio._detectCodecs = function() {
     var audio = document.createElement('audio');
     if (audio.canPlayType) {
         this._canPlayOgg = audio.canPlayType('audio/ogg');
-        this._canPlayM4a = audio.canPlayType('audio/mp4');
+        this._canPlayM4a = audio.canPlayType('audio/aac');
     }
 };
 
