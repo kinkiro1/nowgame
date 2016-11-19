@@ -27,6 +27,10 @@
 * @param Nothing Left Text
 * @desc Text shown on when there's no more items to steal.
 * @default %1 doesn't have anything left!
+*
+*@param ID
+* @desc 使用する変数のID。この変数には0～9まで代入でき、1以上の場合はstealx
+* @default 0
 * 
 * @help Version 1.2
 * Free for non-commercial use only.
@@ -64,6 +68,7 @@
 	var stealSkillSuccessText = String(parameters['Skill Success Text'] || "%1 stole skill %2 from %3!");
 	var stealFailText = String(parameters['Steal Fail Text'] || "%1 failed to steal from %2.");
 	var nothingLeftText = String(parameters['Nothing Left Text'] || "%1 doesn't have anything left!");
+	var VariableId = Number(parameters['ID'] || 0);
 
 	var _Game_Enemy_setup = Game_Enemy.prototype.setup;
 
@@ -76,9 +81,26 @@
 
 			for (var i = 0; i < note.length; i++)
 			{
-				if($gameSwitches.value(45)){
+				if($gameVariables.value(VariableId) ==0) {
 				var regex = /<steal:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else {var regex = /<steal2:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==1) {
+					var regex = /<steal1:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==2) {
+					var regex = /<steal2:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==3) {
+					var regex = /<steal3:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==4) {
+					var regex = /<steal4:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==5) {
+					var regex = /<steal5:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==6) {
+					var regex = /<steal6:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==7) {
+					var regex = /<steal7:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==8) {
+					var regex = /<steal8:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+				} else if($gameVariables.value(VariableId) ==9) {
+					var regex = /<steal9:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
 					};
 				var match = regex.exec(note[i]);
 				if (!match) continue;
