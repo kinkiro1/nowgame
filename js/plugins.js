@@ -30,8 +30,9 @@ var $plugins =
 {"name":"TitleCommandPosition","status":true,"description":"タイトルコマンドウィンドウの位置を変更します。","parameters":{"Offset X":"0","Offset Y":"0","Width":"240","Background":"1"}},
 {"name":"SceneGlossary","status":true,"description":"ゲーム内用語辞典プラグイン","parameters":{"カテゴリ分類":"ON","コマンド名称":"ノート","コマンド名称2":"","コマンド名称3":"","コマンド名称4":"","アイテムタイプ":"A","自動登録":"ON","フォントサイズ":"22","用語集リスト横幅":"240","ヘルプテキスト":"項目を選択してください","ヘルプテキスト2":"カテゴリを選択してください","アイテム使用":"OFF","画像の自動縮小":"ON","画像の表示位置":"top","画像の揃え":"center","背景ピクチャ":"","背景ピクチャ透過":"OFF","確認メッセージ":"OFF","自動登録IDスイッチ":"0","自動登録ID変数":"0","確認_使う":"使う","確認_使わない":"やめる","収集率表示":"OFF","収集率メッセージ":"収集率 \\c[2]%1\\c[0] ％","新着用語カラー":"2"}},
 {"name":"DebugMonitor","status":true,"description":"スイッチ・変数の状態を画面上にリアルタイム表示します。","parameters":{"monitorX":"0","monitorY":"0","monitorW":"240"}},
-{"name":"MrTS_StealSkill","status":true,"description":"Allows to steal items and skills from enemies.","parameters":{"Steal Mode":"1","Steal Success Text":"%3から%2を盗んだ！","Steal Fail Text":"何も盗めなかった","Nothing Left Text":"%1にはもう盗めるものがない！","ID":"45"}},
+{"name":"MrTS_StealSkill","status":true,"description":"Allows to steal items and skills from enemies.","parameters":{"Steal Mode":"1","Steal Success Text":"%3から%2を盗んだ！","Steal Fail Text":"しかし何も盗めなかった","Nothing Left Text":"%1は何も持っていない！","ID":"45"}},
 {"name":"KMS_FlexibleScope","status":true,"description":"[v0.1.1] スキル、アイテムに単体 / 全体切り替え機能を追加します。","parameters":{"Switch for-all button":"pageup","Damage rate for-all":"0.6","MP cost rate for-all":"1"}},
 {"name":"FatefulLocation","status":true,"description":"ver1.00 場所移動時の自動演奏の制御等","parameters":{"bgmSwitch":"9","bgsSwitch":"10","atpVariable":"18","defVariable":"19"}},
-{"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}}
+{"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
+{"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}}
 ];
