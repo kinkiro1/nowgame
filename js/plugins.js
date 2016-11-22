@@ -35,5 +35,5 @@ var $plugins =
 {"name":"FatefulLocation","status":true,"description":"ver1.00 場所移動時の自動演奏の制御等","parameters":{"bgmSwitch":"9","bgsSwitch":"10","atpVariable":"18","defVariable":"19"}},
 {"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
 {"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}},
-{"name":"TDDP_PreloadManager","status":true,"description":"マップ/シーン切り替え時、またブート時に素材の事前ロードを行います。","parameters":{"Preload System SFX":"false","Print Debug to Console":"false"}}
+{"name":"TDDP_PreloadManager","status":false,"description":"マップ/シーン切り替え時、またブート時に素材の事前ロードを行います。","parameters":{"Preload System SFX":"false","Print Debug to Console":"false"}}
 ];
