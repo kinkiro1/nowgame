@@ -34,5 +34,6 @@ var $plugins =
 {"name":"KMS_FlexibleScope","status":true,"description":"[v0.1.1] スキル、アイテムに単体 / 全体切り替え機能を追加します。","parameters":{"Switch for-all button":"pageup","Damage rate for-all":"0.6","MP cost rate for-all":"1"}},
 {"name":"FatefulLocation","status":true,"description":"ver1.00 場所移動時の自動演奏の制御等","parameters":{"bgmSwitch":"9","bgsSwitch":"10","atpVariable":"18","defVariable":"19"}},
 {"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
-{"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}}
+{"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}},
+{"name":"TDDP_PreloadManager","status":true,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"true","Preload System Music":"true","Preload System SFX":"true","Print Debug to Console":"false"}}
 ];
