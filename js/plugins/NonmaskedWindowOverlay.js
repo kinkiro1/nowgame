@@ -56,50 +56,80 @@
 (function() {
     var parameters = PluginManager.parameters('NonmaskWindowOverlay');
 
+    var _WindowLayer_initialize = WindowLayer.prototype.initialize;
+    WindowLayer.prototype.initialize = function() {
+        _WindowLayer_initialize.call(this);
+        this._overlayWithoutMask = false;
+    };
+
     WindowLayer.prototype._renderWebGL = function(renderSession) {
-    if (!this.visible) {
-        return;
+        if (!this.visible) {
+            return;
+        }
+
+        var gl = renderSession.gl;
+
+        if (!this._vertexBuffer) {
+            this._vertexBuffer = gl.createBuffer();
+        }
+
+        this._dummySprite._renderWebGL(renderSession);
+
+        renderSession.spriteBatch.stop();
+        gl.enable(gl.STENCIL_TEST);
+        gl.clear(gl.STENCIL_BUFFER_BIT);
+        this._webglMaskOutside(renderSession);
+        renderSession.spriteBatch.start();
+
+        if (this._overlayWithoutMask) {
+            for (var i = 0; i < this.children.length; i++) {
+                var child = this.children[i];
+                if (child._isWindow && child.visible && child.openness > 0) {
+                    child._renderWebGL(renderSession);
+                }
+            }
+        } else {
+            for (var i = this.children.length - 1; i >= 0; i--) {
+                var child = this.children[i];
+                if (child._isWindow && child.visible && child.openness > 0) {
+                    gl.stencilFunc(gl.EQUAL, 0, 0xFF);
+                    child._renderWebGL(renderSession);
+                    renderSession.spriteBatch.stop();
+                    this._webglMaskWindow(renderSession, child);
+                    renderSession.spriteBatch.start();
+                }
+            }
+        }
+
+        gl.disable(gl.STENCIL_TEST);
+
+        for (var j = 0; j < this.children.length; j++) {
+            if (!this.children[j]._isWindow) {
+                this.children[j]._renderWebGL(renderSession);
+            }
+        }
+    };
+
+    Scene_Base.prototype.enableOverlayWithoutMask = function() {
+        this._windowLayer._overlayWithoutMask = true;
     }
 
-    var gl = renderSession.gl;
-
-    if (!this._vertexBuffer) {
-        this._vertexBuffer = gl.createBuffer();
+    Scene_Base.prototype.disableOverlayWithoutMask = function() {
+        this._windowLayer._overlayWithoutMask = false;
     }
 
-    this._dummySprite._renderWebGL(renderSession);
-
-    renderSession.spriteBatch.stop();
-    gl.enable(gl.STENCIL_TEST);
-    gl.clear(gl.STENCIL_BUFFER_BIT);
-    this._webglMaskOutside(renderSession);
-    renderSession.spriteBatch.start();
-
-    if($gameSwitches.value(21)){
-        for (var i = this.children.length - 1; i >= 0; i--) {
-        var child = this.children[i];
-        if (child._isWindow && child.visible && child.openness > 0) {
-            gl.stencilFunc(gl.EQUAL, 0, 0xFF);
-            child._renderWebGL(renderSession);
-            renderSession.spriteBatch.stop();
-            this._webglMaskWindow(renderSession, child);
-            renderSession.spriteBatch.start();
+    var _scenes = (parameters['nonmaskedScene'] || "").split(" ");
+    for (i = 0; i < _scenes.length; i++) {
+        var _scene = "Scene_" + _scenes[i]
+        if (_scene in window) {
+            var _sceneObject = (new Function("return " + _scene))();
+            (function(){
+                var _scene_create = _sceneObject.prototype.create;
+                _sceneObject.prototype.create = function () {
+                    _scene_create.call(this);
+                    this.enableOverlayWithoutMask();
+                };
+            })();
         }
     }
-    } else {for (var i = 0; i < this.children.length; i++) {
-        var child = this.children[i];
-        if (child._isWindow && child.visible && child.openness > 0) {
-            child._renderWebGL(renderSession);
-        }
-    }
-    }
-
-    gl.disable(gl.STENCIL_TEST);
-
-    for (var j = 0; j < this.children.length; j++) {
-        if (!this.children[j]._isWindow) {
-            this.children[j]._renderWebGL(renderSession);
-        }
-    }
-};
 })();
