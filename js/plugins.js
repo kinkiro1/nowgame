@@ -37,9 +37,10 @@ var $plugins =
 {"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
 {"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}},
 {"name":"TDDP_PreloadManager","status":true,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"true","Preload System Music":"false","Preload System SFX":"false","Print Debug to Console":"false"}},
-{"name":"NonmaskedWindowOverlay","status":true,"description":"ウィンドウをマスクせずに重ね合わせられるようにします。","parameters":{"nonmaskedScene":""}},
 {"name":"Kpp_ItemDropRate","status":true,"description":"エネミーのアイテムドロップ率を百分率(％表記)に変更します。","parameters":{}},
 {"name":"YEP_BaseTroopEvents","status":true,"description":"全ての敵グループに対して、\r\n毎回戦闘で発生するイベントを設定します。","parameters":{"Base Troop ID":"2"}},
-{"name":"BattleWinEvent","status":true,"description":"キンキロ専用プラグイン","parameters":{"Switch ID":"21"}},
-{"name":"ShopAllStatus","status":true,"description":"ショップで装備品を購入する際、詳細な情報を\r\n表示することができます","parameters":{}}
+{"name":"ShopAllStatus","status":true,"description":"ショップで装備品を購入する際、詳細な情報を\r\n表示することができます","parameters":{}},
+{"name":"BattleWinEvent","status":false,"description":"キンキロ専用プラグイン","parameters":{"Switch ID":"21"}},
+{"name":"NonmaskedWindowOverlay3","status":false,"description":"ウィンドウをマスクせずに重ね合わせられるようにします。","parameters":{"nonmaskedScene":""}},
+{"name":"NonmaskedWindowOverlay","status":true,"description":"ウィンドウをマスクせずに重ね合わせられるようにします。","parameters":{"nonmaskedScene":""}}
 ];
