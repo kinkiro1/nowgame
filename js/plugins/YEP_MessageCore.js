@@ -879,7 +879,6 @@ Window_Base.prototype.processEscapeCharacter = function(code, textState) {
     case 'PY':
         textState.y = this.obtainEscapeParam(textState);
         break;
-        break;
 		default:
       Yanfly.Message.Window_Base_processEscapeCharacter.call(this,
 				code, textState);
@@ -1063,7 +1062,7 @@ Window_NameBox.prototype.constructor = Window_NameBox;
 
 Window_NameBox.prototype.initialize = function(parentWindow) {
     this._parentWindow = parentWindow;
-		this._ignoreMask = false
+		this._ignoreMask = true
     Window_Base.prototype.initialize.call(this, 0, 0, 240, this.windowHeight());
 		this._text = '';
 		this._openness = 0;
