@@ -577,6 +577,7 @@ function Scene_Glossary() {
             case 'GLOSSARY_CALL' :
             case '用語集画面の呼び出し' :
                 $gameTemp.setGlossaryType(getArgNumber(args[0], 1));
+                $gameSwitches.setValue(25,true)
                 SceneManager.push(Scene_Glossary);
                 break;
             case 'GLOSSARY_GAIN_ALL' :
@@ -793,7 +794,9 @@ function Scene_Glossary() {
         this._glossaryListWindow = new Window_GlossaryList(this._glossaryWindow);
         this._glossaryListWindow.setHandler('cancel', this.onCancelGlossaryList.bind(this));
         if (paramUsableItem) {
+            if($gameSwitches.value(25)){
             this._glossaryListWindow.setHandler('ok', this.onOkGlossaryList.bind(this));
+        }
         }
         this._itemWindow = this._glossaryListWindow;
         this.addWindow(this._glossaryListWindow);
@@ -875,7 +878,9 @@ function Scene_Glossary() {
     };
 
     Scene_Glossary.prototype.playSeForItem = function() {
+        if(!$gameSwitches.value(25)){
         SoundManager.playUseItem();
+        }
     };
 
     Scene_Glossary.prototype.isCursorLeft = function() {
@@ -926,6 +931,7 @@ function Scene_Glossary() {
     };
 
     Scene_Glossary.prototype.escapeScene = function() {
+        $gameSwitches.setValue(25,false)
         this.popScene();
     };
 
