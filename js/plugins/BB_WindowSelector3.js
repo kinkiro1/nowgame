@@ -23,6 +23,14 @@
  * @desc 指定したIDの変数の数値によってウインドウの透明度を調節します。default：192
  * @default 192
  * 
+ * @param Window4 Opacity
+ * @desc 指定したIDの変数の数値によってウインドウの透明度を調節します。default：192
+ * @default 192
+ * 
+ * * @param Window5 Opacity
+ * @desc 指定したIDの変数の数値によってウインドウの透明度を調節します。default：192
+ * @default 192
+ * 
  * @param Window1 OutlineColor
  * @desc Windowの文字枠の色を変更します。R(赤),G(緑),B(青),A(強さ)の順番でカンマ(,)区切りで指定。default：rgba(0, 0, 0, 0.5)
  * @default rgba(0, 0, 0, 0.5)
@@ -44,6 +52,22 @@
  * @default rgba(0, 0, 0, 0.5)
  * 
  * @param Window3 OutlineWidth
+ * @desc Windowの文字枠の幅を変更します。default：4
+ * @default 4
+ * 
+ * @param Window4 OutlineColor
+ * @desc Window4の文字枠の色を変更します。R(赤),G(緑),B(青),A(強さ)の順番でカンマ(,)区切りで指定。default：rgba(0, 0, 0, 0.5)
+ * @default rgba(0, 0, 0, 0.5)
+ * 
+ * @param Window4 OutlineWidth
+ * @desc Windowの文字枠の幅を変更します。default：4
+ * @default 4
+ * 
+ * @param Window5 OutlineColor
+ * @desc Window5の文字枠の色を変更します。R(赤),G(緑),B(青),A(強さ)の順番でカンマ(,)区切りで指定。default：rgba(0, 0, 0, 0.5)
+ * @default rgba(0, 0, 0, 0.5)
+ * 
+ * @param Window5 OutlineWidth
  * @desc Windowの文字枠の幅を変更します。default：4
  * @default 4
  * 
@@ -77,10 +101,30 @@
  * default：rgba(0, 0, 0, 0)
  * @default rgba(0, 0, 0, 0)
  * 
+ * @param Window4 DimmerColor
+ * @desc Window4を暗くするに設定した時の背景色。
+ * default：rgba(0, 0, 0, 0.6)
+ * @default rgba(0, 0, 0, 0.6)
+ * 
+ * @param Window4 DimGradationColor
+ * @desc Window4を暗くするに設定した時の背景色グラデーション。
+ * default：rgba(0, 0, 0, 0)
+ * @default rgba(0, 0, 0, 0)
+ * 
+ * @param Window5 DimmerColor
+ * @desc Window5を暗くするに設定した時の背景色。
+ * default：rgba(0, 0, 0, 0.6)
+ * @default rgba(0, 0, 0, 0.6)
+ * 
+ * @param Window5 DimGradationColor
+ * @desc Window5を暗くするに設定した時の背景色グラデーション。
+ * default：rgba(0, 0, 0, 0)
+ * @default rgba(0, 0, 0, 0)
+ * 
  * @help Variable ID：パラメータで指定したIDの変数が2の時にWindow2が表示され、
  * 3のときにはWindow3が表示されます。それ以外のときはWindowを表示します。
  * --------------------------------------------------------------------------
- * Window1～3 Opacity：それぞれのウインドウの透明度を設定できます。
+ * Window1～5 Opacity：それぞれのウインドウの透明度を設定できます。
  * 透明度範囲＝0～255。デフォルト＝192。
  * --------------------------------------------------------------------------
  * ウインドウはそれぞれ文字枠色、文字枠幅を調節できます。
@@ -121,18 +165,28 @@
         var BBWS1o = Number(parameters['Window1 Opacity'] || '192');
         var BBWS2o = Number(parameters['Window2 Opacity'] || '192');
         var BBWS3o = Number(parameters['Window3 Opacity'] || '192');
+        var BBWS4o = Number(parameters['Window4 Opacity'] || '192');
+        var BBWS5o = Number(parameters['Window5 Opacity'] || '192');
         var BBWS1oc = String(parameters['Window1 OutlineColor'] || 'rgba(0, 0, 0, 0.5)');
         var BBWS1ow = Number(parameters['Window1 OutlineWidth'] || '4');
         var BBWS2oc = String(parameters['Window2 OutlineColor'] || 'rgba(0, 0, 0, 0.5)');
         var BBWS2ow = Number(parameters['Window2 OutlineWidth'] || '4');
         var BBWS3oc = String(parameters['Window3 OutlineColor'] || 'rgba(0, 0, 0, 0.5)');
         var BBWS3ow = Number(parameters['Window3 OutlineWidth'] || '4');
+        var BBWS4oc = String(parameters['Window4 OutlineColor'] || 'rgba(0, 0, 0, 0.5)');
+        var BBWS4ow = Number(parameters['Window4 OutlineWidth'] || '4');
+        var BBWS5oc = String(parameters['Window5 OutlineColor'] || 'rgba(0, 0, 0, 0.5)');
+        var BBWS5ow = Number(parameters['Window5 OutlineWidth'] || '4');
         var BBWS1dm = String(parameters['Window1 DimmerColor'] || 'rgba(0, 0, 0, 0.6)');
         var BBWS2dm = String(parameters['Window1 DimGradationColor'] || 'rgba(0, 0, 0, 0)');
         var BBWS3dm = String(parameters['Window2 DimmerColor'] || 'rgba(0, 0, 0, 0.6)');
         var BBWS4dm = String(parameters['Window2 DimGradationColor'] || 'rgba(0, 0, 0, 0)');
         var BBWS5dm = String(parameters['Window3 DimmerColor'] || 'rgba(0, 0, 0, 0.6)');
         var BBWS6dm = String(parameters['Window3 DimGradationColor'] || 'rgba(0, 0, 0, 0)');
+        var BBWS7dm = String(parameters['Window4 DimmerColor'] || 'rgba(0, 0, 0, 0.6)');
+        var BBWS8dm = String(parameters['Window4 DimGradationColor'] || 'rgba(0, 0, 0, 0)');
+        var BBWS9dm = String(parameters['Window5 DimmerColor'] || 'rgba(0, 0, 0, 0.6)');
+        var BBWS10dm = String(parameters['Window5 DimGradationColor'] || 'rgba(0, 0, 0, 0)');
 
 // 画像の読み込み
 var _Scene_Boot_prototype_loadSystemWindowImage = Scene_Boot.prototype.loadSystemWindowImage;
@@ -140,18 +194,30 @@ Scene_Boot.prototype.loadSystemWindowImage = function() {
     ImageManager.loadSystem('Window');
     ImageManager.loadSystem('Window2');
     ImageManager.loadSystem('Window3');
+    ImageManager.loadSystem('Window4');
+    ImageManager.loadSystem('Window5');
 };
 
 // ウインドウ画像の切り替え
 var _Window_Base_prototype_update = Window_Base.prototype.update;
 Window_Base.prototype.update = function() {
     Window.prototype.update.call(this);
-    if($gameVariables.value(BBWSvar) == 3){
+    if($gameVariables.value(BBWSvar) == 4){
+        this.windowskin = ImageManager.loadSystem('Window5');
+        this.backOpacity = BBWS5o;
+        this.contents.outlineColor = BBWS5oc;
+        this.contents.outlineWidth = BBWS5ow;
+    }else if($gameVariables.value(BBWSvar) == 3){
+        this.windowskin = ImageManager.loadSystem('Window4');
+        this.backOpacity = BBWS4o;
+        this.contents.outlineColor = BBWS4oc;
+        this.contents.outlineWidth = BBWS4ow;
+    }else if($gameVariables.value(BBWSvar) == 2){
         this.windowskin = ImageManager.loadSystem('Window3');
         this.backOpacity = BBWS3o;
         this.contents.outlineColor = BBWS3oc;
         this.contents.outlineWidth = BBWS3ow;
-    }else if($gameVariables.value(BBWSvar) == 2){
+    }else if($gameVariables.value(BBWSvar) == 1){
         this.windowskin = ImageManager.loadSystem('Window2');
         this.backOpacity = BBWS2o;
         this.contents.outlineColor = BBWS2oc;
@@ -183,10 +249,16 @@ Window_Base.prototype.refreshDimmerBitmap = function() {
         var w = this.width;
         var h = this.height;
         var m = this.padding;
-        if($gameVariables.value(BBWSvar) == 3){
+        if($gameVariables.value(BBWSvar) == 4){
+            var c1 = this.dimColor9();
+            var c2 = this.dimColor10();
+        }else if($gameVariables.value(BBWSvar) == 3){
+            var c1 = this.dimColor7();
+            var c2 = this.dimColor8();
+        }else if($gameVariables.value(BBWSvar) == 2){
             var c1 = this.dimColor5();
             var c2 = this.dimColor6();
-        }else if($gameVariables.value(BBWSvar) == 2){
+        }else if($gameVariables.value(BBWSvar) == 1){
             var c1 = this.dimColor3();
             var c2 = this.dimColor4();
         }else{
@@ -206,7 +278,7 @@ Window_Base.prototype.dimColor1 = function() {
     return BBWS1dm;
 };
 
-var _Window_Base_prototype_dimColor21 = Window_Base.prototype.dimColor2;
+var _Window_Base_prototype_dimColor2 = Window_Base.prototype.dimColor2;
 Window_Base.prototype.dimColor2 = function() {
     return BBWS2dm;
 };
@@ -229,6 +301,26 @@ Window_Base.prototype.dimColor5 = function() {
 var _Window_Base_prototype_dimColor6 = Window_Base.prototype.dimColor6;
 Window_Base.prototype.dimColor6 = function() {
     return BBWS6dm;
+};
+
+var _Window_Base_prototype_dimColor7 = Window_Base.prototype.dimColor7;
+Window_Base.prototype.dimColor7 = function() {
+    return BBWS7dm;
+};
+
+var _Window_Base_prototype_dimColor8 = Window_Base.prototype.dimColor8;
+Window_Base.prototype.dimColor8 = function() {
+    return BBWS8dm;
+};
+
+var _Window_Base_prototype_dimColor9 = Window_Base.prototype.dimColor9;
+Window_Base.prototype.dimColor9 = function() {
+    return BBWS9dm;
+};
+
+var _Window_Base_prototype_dimColor10 = Window_Base.prototype.dimColor10;
+Window_Base.prototype.dimColor10 = function() {
+    return BBWS10dm;
 };
 
 
