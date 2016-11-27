@@ -36,7 +36,6 @@ var $plugins =
 {"name":"FatefulLocation","status":true,"description":"ver1.00 場所移動時の自動演奏の制御等","parameters":{"bgmSwitch":"9","bgsSwitch":"10","atpVariable":"18","defVariable":"19"}},
 {"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
 {"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}},
-{"name":"TDDP_PreloadManager","status":true,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"true","Preload System Music":"false","Preload System SFX":"false","Print Debug to Console":"false"}},
 {"name":"Kpp_ItemDropRate","status":true,"description":"エネミーのアイテムドロップ率を百分率(％表記)に変更します。","parameters":{}},
 {"name":"YEP_BaseTroopEvents","status":true,"description":"全ての敵グループに対して、\r\n毎回戦闘で発生するイベントを設定します。","parameters":{"Base Troop ID":"2"}},
 {"name":"ShopAllStatus","status":true,"description":"ショップで装備品を購入する際、詳細な情報を\r\n表示することができます","parameters":{}},
