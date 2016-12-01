@@ -356,8 +356,7 @@
       }
     }
     // fill background
-    this.contents.paintOpacity = 160;
-    this.contents.fillRect(0, 21, 816, 36, '#000000');
+    this.drawBackground(0, 21, 400, this.lineHeight());
     // draw item name, number, description
     if(type >= 0 && type <= 2) {
       this.contents.paintOpacity = 255;
@@ -365,10 +364,7 @@
       if(value < 0){
         this.contents.paintOpacity = 160;
       }
-      this.drawItemName(data, 6, 21, 300);
-      this.drawText('\xd7', 306, 21, 24, 'center');
-      this.drawText(String(Math.abs(value)), 330, 21, 32, 'right');
-      this.drawText(this.description(data), 384, 21, 432, 'left');
+      this.drawItemName(data, 34, 21, 300);
     }
     // draw guide string
     this.contents.paintOpacity = 160;
@@ -382,6 +378,13 @@
       $gameParty.gainItem(data, value);
     }
   };
+
+  Window_GetInfo.prototype.drawBackground = function(x, y, width, height) {
+    var color1 = this.dimColor1();
+    var color2 = this.dimColor2();
+    this.contents.gradientFillRect(x, y, width / 2, height, color2, color1);
+    this.contents.gradientFillRect(x + width / 2, y, width / 2, height, color1, color2);
+};
 
   Window_GetInfo.prototype.description = function(data) {
     if(data.meta.info) {
