@@ -196,6 +196,8 @@ Scene_Boot.prototype.loadSystemWindowImage = function() {
     ImageManager.loadSystem('Window3');
     ImageManager.loadSystem('Window4');
     ImageManager.loadSystem('Window5');
+    ImageManager.loadPicture('battletutorial');
+    ImageManager.loadPicture('battletutorial2');
 };
 
 // ウインドウ画像の切り替え
