@@ -122,6 +122,10 @@ TDDP.PreloadManager = TDDP.PreloadManager || {};
 * ]
 */
 TDDP.bootPreloadImages = {
+    picture: [
+        "battletutorial",
+        "battletutorial2"
+    ]
     /* Example
     face: [
         "Actor3"

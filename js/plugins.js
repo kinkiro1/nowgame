@@ -36,10 +36,9 @@ var $plugins =
 {"name":"FatefulLocation","status":true,"description":"ver1.00 場所移動時の自動演奏の制御等","parameters":{"bgmSwitch":"9","bgsSwitch":"10","atpVariable":"18","defVariable":"19"}},
 {"name":"NumbState","status":true,"description":"一定確率で行動できないステート","parameters":{"NumbMsg":"は身体がしびれて動けない！"}},
 {"name":"Saba_SortOrder","status":true,"description":"アイテム、武器防具、スキルの並び順をメモ欄で指定できるようになります。","parameters":{}},
-{"name":"Kpp_ItemDropRate","status":true,"description":"エネミーのアイテムドロップ率を百分率(％表記)に変更します。","parameters":{}},
-{"name":"YEP_BaseTroopEvents","status":true,"description":"全ての敵グループに対して、\r\n毎回戦闘で発生するイベントを設定します。","parameters":{"Base Troop ID":"2"}},
 {"name":"ShopAllStatus","status":true,"description":"ショップで装備品を購入する際、詳細な情報を\r\n表示することができます","parameters":{}},
 {"name":"BB_WindowSelector3","status":true,"description":"ウインドウスキンと切り替えるプラグイン。","parameters":{"Variable ID":"6","Window1 Opacity":"192","Window2 Opacity":"192","Window3 Opacity":"192","Window1 OutlineColor":"rgba(0, 0, 0, 0.5)","Window1 OutlineWidth":"4","Window2 OutlineColor":"rgba(0, 0, 0, 0.5)","Window2 OutlineWidth":"4","Window3 OutlineColor":"rgba(0, 0, 0, 0.5)","Window3 OutlineWidth":"4","Window1 DimmerColor":"rgba(0, 0, 0, 0.6)","Window1 DimGradationColor":"rgba(0, 0, 0, 0)","Window2 DimmerColor":"rgba(0, 0, 0, 0.6)","Window2 DimGradationColor":"rgba(0, 0, 0, 0)","Window3 DimmerColor":"rgba(0, 0, 0, 0.6)","Window3 DimGradationColor":"rgba(0, 0, 0, 0)"}},
 {"name":"KeyItemNumber","status":true,"description":"「大事なもの」の個数表示の設定","parameters":{"KeyItem":"2","MessageWindow":"2"}},
-{"name":"TinyGetInfoWnd","status":true,"description":"マップ上でアイテムの入手/消失を小さなウィンドウで表示します。","parameters":{"Event Command Switch":"35","Y position type":"0","textGainItem":"称号獲得","textLoseItem":"","SE filename":"Syogo","SE volume":"60","SE pitch":"150"}}
+{"name":"TinyGetInfoWnd","status":true,"description":"マップ上でアイテムの入手/消失を小さなウィンドウで表示します。","parameters":{"Event Command Switch":"35","Y position type":"0","textGainItem":"称号獲得","textLoseItem":"","SE filename":"Syogo","SE volume":"60","SE pitch":"150"}},
+{"name":"TDDP_PreloadManager","status":true,"description":"1.1.1 Preload resources on scene/map load as well as game startup for a smoother gameplay experience.          id:TDDP_PreloadManager","parameters":{"Preload On Map Load":"false","Preload System Music":"false","Preload System SFX":"false","Print Debug to Console":"false"}}
 ];
