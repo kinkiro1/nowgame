@@ -499,5 +499,5 @@ null,
 {"id":497,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
 {"id":498,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
 {"id":499,"animationId":0,"description":"","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0,"wtypeId":0},
-{"id":500,"animationId":122,"description":"ソラの背中に生えている翼\n攻撃方法はフェザーショット","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":141,"name":"天使の翼","note":"","params":[0,0,3,0,3,0,0,0],"price":0,"wtypeId":20}
+{"id":500,"animationId":122,"description":"背中に生えている翼\n攻撃方法はフェザーショット","etypeId":1,"traits":[{"code":31,"dataId":1,"value":0},{"code":22,"dataId":0,"value":0}],"iconIndex":141,"name":"天使の翼","note":"","params":[0,0,3,0,3,0,0,0],"price":0,"wtypeId":20}
 ]
