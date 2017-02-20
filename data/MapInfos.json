@@ -66,7 +66,7 @@ null,
 {"id":64,"expanded":false,"name":"地下水路　王都側入口","order":30,"parentId":26,"scrollX":1263.2727272727273,"scrollY":810.5454545454546},
 {"id":65,"expanded":false,"name":"裏地下水路","order":28,"parentId":62,"scrollX":1245.8181818181818,"scrollY":793.0909090909091},
 {"id":66,"expanded":true,"name":"シトン山脈・村側3","order":16,"parentId":67,"scrollX":1544,"scrollY":990.6666666666666},
-{"id":67,"expanded":true,"name":"シトン山脈・村側1","order":14,"parentId":6,"scrollX":1544,"scrollY":990.6666666666666},
+{"id":67,"expanded":true,"name":"シトン山脈・村側1","order":14,"parentId":6,"scrollX":1280,"scrollY":624},
 {"id":68,"expanded":false,"name":"シトン山脈・村側2","order":15,"parentId":67,"scrollX":1544,"scrollY":990.6666666666666},
 {"id":69,"expanded":true,"name":"シトン山脈・分岐1(崩落後)","order":18,"parentId":13,"scrollX":1544,"scrollY":990.6666666666666}
 ]
