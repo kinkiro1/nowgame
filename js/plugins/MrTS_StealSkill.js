@@ -81,26 +81,37 @@
 
 			for (var i = 0; i < note.length; i++)
 			{
-				if($gameVariables.value(VariableId) ==0) {
-				var regex = /<steal:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==1) {
+				switch($gameVariables.value(VariableId)) {
+					case 0:
+					var regex = /<steal:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+					break;
+					case 1:
 					var regex = /<steal1:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==2) {
+					break;
+					case 2:
 					var regex = /<steal2:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==3) {
+					break;
+					case 3:
 					var regex = /<steal3:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==4) {
+					break;
+					case 4:
 					var regex = /<steal4:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==5) {
+					break;
+					case 5:
 					var regex = /<steal5:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==6) {
+					break;
+					case 6:
 					var regex = /<steal6:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==7) {
+					break;
+					case 7:
 					var regex = /<steal7:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==8) {
+					break;
+					case 8:
 					var regex = /<steal8:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
-				} else if($gameVariables.value(VariableId) ==9) {
+					break;
+					case 9:
 					var regex = /<steal9:[ ]*([wais])+,[ ]*(\d+),[ ]*(\d+[.]*\d*),[ ]*(\d+)[, ]*(\d+)>/i;
+					break;
 					};
 				var match = regex.exec(note[i]);
 				if (!match) continue;
